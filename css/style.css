@@ -21,7 +21,7 @@
 }
 
 .track{
-    background-image: url('/images/track.jpg');
+    background-image: url('./track.jpg');
     background-size: 100vw;
 }
 .customer-para-img{
