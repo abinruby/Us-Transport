@@ -11,6 +11,14 @@
     transition: all .4s ease;
 }
 
+h1{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+p{
+  font-family: sans-serif;
+}
+
 .fade-out-animation{
     opacity: 0;
     visibility: hidden;
@@ -22,7 +30,7 @@
 
 .track{
     background-image: url('../images/truck.jpg');
-    background-size: 100vw;
+    background-size: cover;
 }
 .customer-para-img{
     width: 50vw;
@@ -87,7 +95,14 @@
     transform: scale(1.5);
   }
 
+.card-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
 
+.card-shadow:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
   
   .card-icon {
     width: 100px;
@@ -101,10 +116,37 @@
     animation: spin 0.4s linear;
   }
 
+  #track-container{
+    padding:1% 20%;
+    }
+    #track-img{
+      height: 200px;
+    }
+
+    .footer-links{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   
   @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+  }
+
+  @media screen and (max-width:769px) {
+    .footer-links{
+      display: block;
+    }
+
+    #track-container{
+    padding: 1rem;
+    }
+
+    #track-img{
+      height: 200px;
+      padding-top: 2rem;
+    }
   }
   
   
