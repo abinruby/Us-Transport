@@ -205,7 +205,13 @@
 
       <script>
         async function getTrackDetails(){
-        const response=  await fetch('https://uat.ustrack.in/userTrack?conNo=87987687543562') 
+        const response=  await fetch('https://uat.ustrack.in/userTrack?conNo=87987687543562',{
+          headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
+          }
+        }) 
         const jsonData=await response.json()
         console.log(jsonData)
         }
