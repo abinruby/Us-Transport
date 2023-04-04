@@ -164,7 +164,7 @@
             <h1 style="color: green;">TRACK YOUR SHIPMENT</h1>
             <P style="color: green;">Find the status of your transit shipment</P>
             <input type="text">
-            <div class="btn btn-success" >Track</div>
+            <div class="btn btn-success" onclick="getTrackDetails()" >Track</div>
         </div>
          <div class="col-12 col-md-6">
             <img  id="track-img" src="./images/safe logistics.png" alt="">
@@ -202,6 +202,14 @@
       </div>
   
       <!-- Footer Ending -->
+
+      <script>
+        async function getTrackDetails(){
+        const response=  await fetch('http://localhost:3000/userTrack?conNo=87987687543562') 
+        const jsonData=await response.json()
+        console.log(jsonData)
+        }
+      </script>
   
       <script src="js/main.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
